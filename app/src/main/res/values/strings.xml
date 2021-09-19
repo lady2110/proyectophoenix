@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PHOENIX</string>
+    <string name="WELCOME">WELCOME</string>
+    <string name="PHOENIX">PHOENIX</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="LOGIN_IN">LOGIN IN</string>
+    <string name="SING_UP">SING UP</string>
+    <string name="SING_IN">SING IN</string>
+    <string name="EMAIL">E-mail</string>
+    <string name="PASSWORD">Password</string>
+    <string name="NOMBRE">Name</string>
+    <string name="TELEFONO">Telephone</string>
+</resources>
