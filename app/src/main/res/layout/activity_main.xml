@@ -115,6 +115,7 @@
         android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_500"
         android:fontFamily="@font/syncopate_bold"
         android:rotation="90"
         android:text="@string/LOGIN_IN"
