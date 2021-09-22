@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067993184083",
+    "project_id": "phoeni-2c5d8",
+    "storage_bucket": "phoeni-2c5d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067993184083:android:3777ad23d7e968929fd3a6",
+        "android_client_info": {
+          "package_name": "com.fenix.proyectofenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067993184083-kdmpbjr6nu02rmpjq87j5paoba9ui4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwjs5lpmlnqtDg1mBa0b40X4aNYIbtYAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067993184083-kdmpbjr6nu02rmpjq87j5paoba9ui4jt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

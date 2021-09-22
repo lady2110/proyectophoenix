@@ -1,25 +1,32 @@
 package com.fenix.proyectofenix;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
+
+    private FirebaseAuth mAuth;
+
     TextView log, sing;
     EditText name, email, password, phone;
     Button enter;
@@ -29,7 +36,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-
+        mAuth = FirebaseAuth.getInstance();
         Display display = getWindowManager().getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         display.getRealMetrics(displayMetrics);
@@ -50,6 +57,14 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        // updateUI(currentUser);
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnlogin:
@@ -63,18 +78,36 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 });
                 break;
             case R.id.btnenter:
-                String nameField = name.getText().toString();
-                String emailField = email.getText().toString();
-                String pwdField = password.getText().toString();
-                String phoneFiedl = phone.getText().toString();
+                String nameField = name.getText().toString().trim();
+                String emailField = email.getText().toString().trim();
+                String pwdField = password.getText().toString().trim();
+                String phoneFiedl = phone.getText().toString().trim();
 
 
-                if(validate(nameField,emailField,pwdField,phoneFiedl)){
+                if (validate(nameField, emailField, pwdField, phoneFiedl)) {
                     Button enter;
                     enter = (Button) findViewById(R.id.btnenter);
+
+                    mAuth.createUserWithEmailAndPassword(emailField, pwdField)
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Toast.makeText(getApplicationContext(), "Registro existoso", Toast.LENGTH_LONG).show();
+
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Fallo", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+
+
                     enter.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+
+
                             Intent Siguiente = new Intent(Registro.this, Menu.class);
                             startActivity(Siguiente);
                         }

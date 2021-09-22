@@ -1,13 +1,10 @@
 package com.fenix.proyectofenix;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.WindowManager;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
