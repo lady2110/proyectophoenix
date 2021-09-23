@@ -4,8 +4,8 @@
     <string name="PHOENIX">PHOENIX</string>
     <string name="LOGIN">LOGIN</string>
     <string name="LOGIN_IN">LOGIN IN</string>
-    <string name="SING_UP">SING UP</string>
-    <string name="SING_IN">SING IN</string>
+    <string name="SING_UP">SIGN UP</string>
+    <string name="SING_IN">SIGN IN</string>
     <string name="EMAIL">E-mail</string>
     <string name="PASSWORD">Password</string>
     <string name="NOMBRE">Name</string>

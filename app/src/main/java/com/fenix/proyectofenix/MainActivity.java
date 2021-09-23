@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             startActivity(Siguiente);
                         }
                     });
+                    BorrarCampos();
                 }
 
                 break;
@@ -131,5 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return false;
         }
         return true;
+    }
+    public void BorrarCampos(){
+        password.setText("");
+        email.setText("");
     }
 }

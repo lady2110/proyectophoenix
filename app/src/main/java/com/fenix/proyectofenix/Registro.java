@@ -108,10 +108,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                         public void onClick(View v) {
 
 
-                            Intent Siguiente = new Intent(Registro.this, Menu.class);
+                            Intent Siguiente = new Intent(Registro.this, MainActivity.class);
                             startActivity(Siguiente);
                         }
                     });
+                    BorrarCampos();
                 }
 
                 break;
@@ -176,5 +177,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             return false;
         }
         return true;
+    }
+
+    public void BorrarCampos(){
+        name.setText("");
+        password.setText("");
+        email.setText("");
+        phone.setText("");
     }
 }
