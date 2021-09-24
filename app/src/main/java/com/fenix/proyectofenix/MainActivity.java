@@ -35,14 +35,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mAuth = FirebaseAuth.getInstance();
         //poner el icono  en action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.drawable.ic_fenix);
 
         email = findViewById(R.id.txtemail);
         password = findViewById(R.id.txtpassword);
         log = findViewById(R.id.btnlogin);
         sing = findViewById(R.id.btnsing);
         enter = findViewById(R.id.btnenter);
+        sing.setOnClickListener(this);
+        enter.setOnClickListener(this);
 
     }
 
@@ -56,13 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.btnsing:
                 sing = (TextView) findViewById(R.id.btnsing);
-                sing.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent Siguiente = new Intent(MainActivity.this, Registro.class);
-                        startActivity(Siguiente);
-                    }
-                });
+                Intent Siguiente = new Intent(MainActivity.this, Registro.class);
+                startActivity(Siguiente);
                 break;
             case R.id.btnenter:
                 if(validate(email.getText().toString().trim(), password.getText().toString().trim())){
@@ -84,13 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
 
-                    enter.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent Siguiente = new Intent(MainActivity.this, Menu.class);
-                            startActivity(Siguiente);
-                        }
-                    });
+                    Intent Siguiente2 = new Intent(MainActivity.this, Menu.class);
+                    startActivity(Siguiente2);
                     BorrarCampos();
                 }
 

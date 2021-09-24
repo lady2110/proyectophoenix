@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/fongo"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/txtemail"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:background="@color/white"
+        android:background="@drawable/borderedondo"
         android:backgroundTint="@color/white"
-        android:drawableLeft="@mipmap/ic_launcher_email"
+        android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
         android:hint="@string/EMAIL"
         android:inputType="textPersonName"
@@ -30,10 +30,10 @@
         android:layout_height="158dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/fenix" />
 
     <TextView
@@ -99,8 +99,9 @@
         android:id="@+id/txtpassword"
         android:layout_width="219dp"
         android:layout_height="48dp"
-        android:background="@color/white"
-        android:drawableLeft="@mipmap/ic_launcher_password"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_action_password"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -109,7 +110,7 @@
         app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.802" />
 
     <TextView
         android:id="@+id/btnlogin"
@@ -147,14 +148,14 @@
         android:layout_width="146dp"
         android:layout_height="56dp"
         android:layout_marginEnd="52dp"
-        android:background="@color/grisclaro"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/amarillo"
         android:fontFamily="@font/syncopate_bold"
         android:onClick="onClick"
         android:text="@string/SING_IN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.93" />
 </androidx.constraintlayout.widget.ConstraintLayout>

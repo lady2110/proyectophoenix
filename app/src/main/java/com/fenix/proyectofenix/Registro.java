@@ -42,16 +42,17 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         display.getRealMetrics(displayMetrics);
 
         //poner el icono  en action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.drawable.ic_fenix);
 
         name = findViewById(R.id.txtname);
         email = findViewById(R.id.txtemail2);
         password = findViewById(R.id.txtpassword2);
         log = findViewById(R.id.btnlogin);
-        sing = findViewById(R.id.btnsing);
         phone = findViewById(R.id.txtphone);
         enter = findViewById(R.id.btnenter);
+        log.setOnClickListener(this);
+        enter.setOnClickListener(this);
 
 
     }
@@ -69,13 +70,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         switch (view.getId()) {
             case R.id.btnlogin:
                 log = (TextView) findViewById(R.id.btnlogin);
-                log.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent Siguiente = new Intent(Registro.this, MainActivity.class);
-                        startActivity(Siguiente);
-                    }
-                });
+                Intent Siguiente = new Intent(Registro.this, MainActivity.class);
+                startActivity(Siguiente);
                 break;
             case R.id.btnenter:
                 String nameField = name.getText().toString().trim();
@@ -101,17 +97,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                                     }
                                 }
                             });
-
-
-                    enter.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-
-                            Intent Siguiente = new Intent(Registro.this, MainActivity.class);
-                            startActivity(Siguiente);
-                        }
-                    });
+                    Intent Siguiente2 = new Intent(Registro.this, MainActivity.class);
+                    startActivity(Siguiente2);
                     BorrarCampos();
                 }
 
