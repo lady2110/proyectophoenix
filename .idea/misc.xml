@@ -23,27 +23,35 @@
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/drawable/ic_launcher_password_background.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/drawable/ic_launcher_password_foreground.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-land/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-land/activity_registro.xml" value="0.265625" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-land/activity_registro.xml" value="0.67" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-land/activity_splash.xml" value="0.265625" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw200dp-port/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw300dp-port/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw320dp-port/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-land/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-land/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-port/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-port/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-port/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw360dp-port/avticity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw400dp-land/activity_main.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw400dp-land/activity_registro.xml" value="0.21875" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw400dp-port/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw400dp-port/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw400dp-port/activity_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw458dp-port/activity_main.xml" value="0.153125" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw480dp-land/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw480dp-land/activity_registro.xml" value="0.5" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw480dp-port/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw600dp-land/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw480dp-port/activity_registro.xml" value="0.5" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw600dp-land/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw600dp-land/activity_registro.xml" value="0.150390625" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw600dp-port/activity_main.xml" value="0.153125" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-sw600dp-port/activity_registro.xml" value="0.12430555555555556" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout-w1440dp-h2560dp-port/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout/activity_registro.xml" value="0.25" />
+        <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout/activity_registro.xml" value="0.5" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/Leidy/Desktop/segundo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_correo.xml" value="0.2169230769230769" />

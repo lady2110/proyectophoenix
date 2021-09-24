@@ -55,13 +55,13 @@
 
     <EditText
         android:id="@+id/txtname"
-        android:layout_width="277dp"
+        android:layout_width="220dp"
         android:layout_height="48dp"
         android:background="@drawable/borderedondo"
+        android:drawableLeft="@drawable/ic_action_usuario"
         android:ems="10"
         android:hint="@string/NOMBRE"
         android:inputType="textPersonName"
-        android:drawableLeft="@drawable/ic_action_usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -71,13 +71,13 @@
 
     <EditText
         android:id="@+id/txtemail2"
-        android:layout_width="277dp"
+        android:layout_width="220dp"
         android:layout_height="48dp"
         android:background="@drawable/borderedondo"
+        android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
         android:hint="@string/EMAIL"
         android:inputType="textPersonName"
-        android:drawableLeft="@drawable/ic_action_email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -88,13 +88,13 @@
 
     <EditText
         android:id="@+id/txtpassword2"
-        android:layout_width="277dp"
+        android:layout_width="220dp"
         android:layout_height="48dp"
         android:background="@drawable/borderedondo"
+        android:drawableLeft="@drawable/ic_action_password"
         android:ems="10"
         android:hint="@string/PASSWORD"
         android:inputType="textPassword"
-        android:drawableLeft="@drawable/ic_action_password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -104,13 +104,13 @@
 
     <EditText
         android:id="@+id/txtphone"
-        android:layout_width="277dp"
+        android:layout_width="220dp"
         android:layout_height="48dp"
         android:background="@drawable/borderedondo"
+        android:drawableLeft="@drawable/ic_action_phone"
         android:ems="10"
         android:hint="@string/TELEFONO"
         android:inputType="number"
-        android:drawableLeft="@drawable/ic_action_phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -122,7 +122,6 @@
         android:id="@+id/btnenter"
         android:layout_width="146dp"
         android:layout_height="56dp"
-        android:layout_marginEnd="100dp"
         android:background="@drawable/borderedondo"
         android:backgroundTint="@color/amarillo"
         android:fontFamily="@font/syncopate_bold"
@@ -130,13 +129,15 @@
         android:text="@string/SING_UP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="185dp"
-        android:layout_height="204dp"
+        android:layout_width="152dp"
+        android:layout_height="148dp"
         android:background="@drawable/fenix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

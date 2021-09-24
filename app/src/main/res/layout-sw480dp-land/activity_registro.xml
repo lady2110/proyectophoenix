@@ -56,8 +56,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="157dp"
-        android:layout_height="159dp"
+        android:layout_width="226dp"
+        android:layout_height="228dp"
         android:background="@drawable/fenix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +69,8 @@
 
     <EditText
         android:id="@+id/txtphone"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/borderedondo"
         android:drawableLeft="@drawable/ic_action_phone"
         android:ems="10"
@@ -81,13 +81,12 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.909" />
 
     <EditText
         android:id="@+id/txtemail2"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/borderedondo"
         android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
@@ -99,13 +98,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.597"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.597" />
 
     <Button
         android:id="@+id/btnenter"
-        android:layout_width="125dp"
-        android:layout_height="45dp"
+        android:layout_width="146dp"
+        android:layout_height="56dp"
         android:background="@drawable/borderedondo"
         android:backgroundTint="@color/amarillo"
         android:fontFamily="@font/syncopate_bold"
@@ -113,16 +111,15 @@
         android:text="@string/SING_UP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.591" />
 
     <EditText
         android:id="@+id/txtpassword2"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/borderedondo"
         android:drawableLeft="@drawable/ic_action_password"
         android:ems="10"
@@ -133,13 +130,12 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.754" />
 
     <EditText
         android:id="@+id/txtname"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/borderedondo"
         android:drawableLeft="@drawable/ic_action_usuario"
         android:ems="10"
@@ -150,8 +146,7 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.443" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
