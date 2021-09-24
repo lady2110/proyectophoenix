@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/txtemail"
-        android:layout_width="277dp"
-        android:layout_height="48dp"
+        android:layout_width="238dp"
+        android:layout_height="46dp"
         android:background="@drawable/borderedondo"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_action_email"
@@ -83,7 +83,7 @@
 
     <EditText
         android:id="@+id/txtpassword"
-        android:layout_width="277dp"
+        android:layout_width="238dp"
         android:layout_height="48dp"
         android:background="@drawable/borderedondo"
         android:backgroundTint="@color/white"
@@ -133,7 +133,7 @@
         android:id="@+id/btnenter"
         android:layout_width="146dp"
         android:layout_height="56dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="68dp"
         android:background="@drawable/borderedondo"
         android:backgroundTint="@color/amarillo"
         android:fontFamily="@font/syncopate_bold"
@@ -142,6 +142,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.926" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
