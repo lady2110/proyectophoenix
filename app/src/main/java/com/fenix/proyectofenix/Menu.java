@@ -1,7 +1,10 @@
 package com.fenix.proyectofenix;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class Menu extends AppCompatActivity {
 
@@ -10,8 +13,12 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //poner el icono  en action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+
+    }
+
+    public void haciaCrearProducto(View view){
+        Intent intent =new Intent(this,agregarProductoActivity.class);
+        startActivity(intent);
     }
 }

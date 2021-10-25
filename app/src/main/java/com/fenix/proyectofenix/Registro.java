@@ -1,5 +1,6 @@
 package com.fenix.proyectofenix;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.security.PrivateKey;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,13 +36,28 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     TextView log, sing;
     EditText name, email, password, phone;
     Button enter;
+    private String telefono ="";
     ImageView imagen;
+    private FirebaseAuth auth;
+    private DatabaseReference UserRef;
+    private ProgressDialog dialog;
+    private String CurrentUserId;
+    private static int Galery_pick =-1;
+    private StorageReference UserImagenPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+
+
         mAuth = FirebaseAuth.getInstance();
+        CurrentUserId=auth.getCurrentUser().getUid();
+        UserRef = FirebaseDatabase.getInstance().getReference().child("usuarios");
+        dialog=new ProgressDialog(this);
+
+
         Display display = getWindowManager().getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         display.getRealMetrics(displayMetrics);
@@ -54,7 +75,10 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         log.setOnClickListener(this);
         enter.setOnClickListener(this);
 
+        Bundle bundle = getIntent().getExtras();
+        if(bundle !=null){
 
+        }
     }
 
     @Override
