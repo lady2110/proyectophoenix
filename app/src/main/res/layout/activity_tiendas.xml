@@ -8,6 +8,12 @@
     android:orientation="vertical"
     tools:context=".Tiendas">
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bannertienda" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -53,7 +59,7 @@
     <EditText
         android:id="@+id/Tname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -67,7 +73,7 @@
     <EditText
         android:id="@+id/Tnit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -81,7 +87,7 @@
     <EditText
         android:id="@+id/Tdireccion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -95,7 +101,7 @@
     <EditText
         android:id="@+id/Ttelefono"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -109,7 +115,7 @@
     <EditText
         android:id="@+id/Tciudad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -123,7 +129,7 @@
     <EditText
         android:id="@+id/Temail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
@@ -138,16 +144,16 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="40dp"
         android:fontFamily="@font/syncopate_bold"
-        android:text="Listas Tiendas"
+        android:text="LISTA TIENDAS"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="34sp" />
 
     <EditText
         android:id="@+id/txtfiltro"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
@@ -162,7 +168,6 @@
         android:id="@+id/datosTiendas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/feni2x"
         android:scrollbarSize="10dp" />
 
 </LinearLayout>

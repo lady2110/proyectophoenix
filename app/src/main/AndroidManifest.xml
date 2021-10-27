@@ -33,9 +33,6 @@
             android:name=".MainActivityCarrito"
             android:exported="true" />
         <activity
-            android:name=".MainActivityMenub"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity

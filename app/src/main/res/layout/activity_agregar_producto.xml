@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/agregar_producto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:background="#FF3C00"
         android:fontFamily="@font/syncopate_bold"
@@ -27,7 +27,7 @@
         android:layout_height="200dp"
         android:layout_below="@id/agregar_producto"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="104dp"
         app:srcCompat="@drawable/ic_imageadd" />
 
     <EditText
@@ -71,8 +71,8 @@
 
     <Button
         android:id="@+id/btn_agregar_producto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="73dp"
         android:layout_below="@id/precio_pro"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
