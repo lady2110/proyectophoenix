@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         FirebaseUser user = mAuth.getCurrentUser();
-
+                                        Intent Siguiente2 = new Intent(MainActivity.this, Menu.class);
+                                        startActivity(Siguiente2);
                                     } else{
                                         Toast.makeText(getApplicationContext(), "Datos equivocados", Toast.LENGTH_LONG).show();
                                     }
@@ -81,8 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
 
-                    Intent Siguiente2 = new Intent(MainActivity.this, Menu.class);
-                    startActivity(Siguiente2);
+
                     BorrarCampos();
                 }
 

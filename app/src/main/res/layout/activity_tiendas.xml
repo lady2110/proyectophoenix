@@ -1,9 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#31FF5722"
+    android:orientation="vertical"
     tools:context=".Tiendas">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnclear"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_clear" />
+
+        <ImageView
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_add" />
+
+        <ImageView
+            android:id="@+id/btnupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_update" />
+
+        <ImageView
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_delete" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Tname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/NombreTienda"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Tnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/NIT"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Tdireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/Address"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Ttelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/TELEFONO"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Tciudad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/City"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Temail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="@string/EMAIL"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/syncopate_bold"
+        android:text="Listas Tiendas"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/txtfiltro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/syncopate_bold"
+        android:hint="Buscar Tienda"
+        android:inputType="textPersonName" />
+
+    <ListView
+        android:id="@+id/datosTiendas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/feni2x"
+        android:scrollbarSize="10dp" />
+
+</LinearLayout>

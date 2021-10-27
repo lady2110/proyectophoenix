@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#31FF5722"
     tools:context=".agregarProductoActivity">
 
 
@@ -12,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:background="@color/black"
-        android:textColor="@color/white"
+        android:background="#FF3C00"
+        android:fontFamily="@font/syncopate_bold"
         android:padding="15dp"
-        android:textStyle="bold|italic"
-        android:text="Agregar producto" />
+        android:text="Agregar producto"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -36,6 +38,7 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
         android:hint="Nombre del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -48,6 +51,7 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
         android:hint="Descripción del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -60,6 +64,7 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
         android:hint="Precio del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -68,15 +73,15 @@
         android:id="@+id/btn_agregar_producto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar Producto"
-        android:gravity="center"
         android:layout_below="@id/precio_pro"
-        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#FF3C00"
+        android:fontFamily="@font/syncopate_bold"
 
 
-
-        />
+        android:gravity="center"
+        android:text="Agregar Producto" />
 
 
 </RelativeLayout>

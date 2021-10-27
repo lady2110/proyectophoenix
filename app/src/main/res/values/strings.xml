@@ -10,4 +10,10 @@
     <string name="PASSWORD">Password</string>
     <string name="NOMBRE">Name</string>
     <string name="TELEFONO">Telephone</string>
+    <string name="NombreTienda">Shop</string>
+    <string name="Address">Address</string>
+    <string name="NIT">NIT</string>
+    <string name="City">City</string>
+    <string name="entrega">Envío gratis en millones de productos desde $70000</string>
+    <string name="oferta">OFERTAS HASTA 50% OFF</string>
 </resources>

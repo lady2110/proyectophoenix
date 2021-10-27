@@ -41,6 +41,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation platform('com.google.firebase:firebase-bom:28.4.1')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
 
 }
 apply plugin: 'com.android.application'

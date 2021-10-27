@@ -1,6 +1,5 @@
 package com.fenix.proyectofenix;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
@@ -16,48 +15,36 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.security.PrivateKey;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
 
     TextView log, sing;
     EditText name, email, password, phone;
     Button enter;
-    private String telefono ="";
     ImageView imagen;
-    private FirebaseAuth auth;
-    private DatabaseReference UserRef;
-    private ProgressDialog dialog;
-    private String CurrentUserId;
-    private static int Galery_pick =-1;
-    private StorageReference UserImagenPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-
-
-
         mAuth = FirebaseAuth.getInstance();
-        CurrentUserId=auth.getCurrentUser().getUid();
-        UserRef = FirebaseDatabase.getInstance().getReference().child("usuarios");
-        dialog=new ProgressDialog(this);
-
-
+        db = FirebaseFirestore.getInstance();
         Display display = getWindowManager().getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         display.getRealMetrics(displayMetrics);
@@ -75,10 +62,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         log.setOnClickListener(this);
         enter.setOnClickListener(this);
 
-        Bundle bundle = getIntent().getExtras();
-        if(bundle !=null){
 
-        }
     }
 
     @Override
@@ -102,7 +86,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 String emailField = email.getText().toString().trim();
                 String pwdField = password.getText().toString().trim();
                 String phoneFiedl = phone.getText().toString().trim();
-
+                saveUserToFirestore();
 
                 if (validate(nameField, emailField, pwdField, phoneFiedl)) {
                     Button enter;
@@ -116,8 +100,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         Toast.makeText(getApplicationContext(), "Registro existoso", Toast.LENGTH_LONG).show();
 
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), "Fallo", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
@@ -196,4 +178,26 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         email.setText("");
         phone.setText("");
     }
+
+    public void saveUserToFirestore(){
+        String emailForm = email.getText().toString();
+        String nameForm = name.getText().toString();
+        String phoneForm = phone.getText().toString();
+        Map<String,Object> user = new HashMap<>();
+        user.put("email",emailForm);
+        user.put("name",nameForm);
+        user.put("phone",phoneForm);
+        db.collection("usuarios").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(getApplicationContext(),"Registro completo", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(),"error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 }
