@@ -35,7 +35,7 @@ import java.util.logging.SimpleFormatter;
 public class agregarProductoActivity extends AppCompatActivity {
 
     private ImageView imagenPro;
-    private EditText nombrePro,descripcionPro,precioPro;
+    private EditText nombrePro,descripcionPro,precioPro_compra, precioPro_venta, categoria, cantidad;
     private Button agregarPro;
 
     private static final int Gallery_Pick = 1;
@@ -44,7 +44,7 @@ public class agregarProductoActivity extends AppCompatActivity {
     private StorageReference ProductoImagenRef;
     private DatabaseReference ProductoRef;
     private ProgressDialog dialog;
-    private String Categoria, Nom, Desc, Pre, CurrenDate, CurrenTime;
+    private String Categoria, Nom, Desc, Pre_com,Pre_vent, cant, cate, CurrenDate, CurrenTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,10 @@ public class agregarProductoActivity extends AppCompatActivity {
         imagenPro = findViewById(R.id.imageView5);
         nombrePro =findViewById(R.id.nompro);
         descripcionPro = findViewById(R.id.descripcion_pro);
-        precioPro = findViewById(R.id.precio_pro);
+        precioPro_compra = findViewById(R.id.precio_compra);
+        precioPro_venta = findViewById(R.id.precio_venta);
+        categoria = findViewById(R.id.categoria);
+        cantidad = findViewById(R.id.cantidad);
         agregarPro = findViewById(R.id.btn_agregar_producto);
         dialog = new  ProgressDialog(this);
 
@@ -79,7 +82,11 @@ public class agregarProductoActivity extends AppCompatActivity {
     private void ValidarProducto() {
         Nom = nombrePro.getText().toString();
         Desc = descripcionPro.getText().toString();
-        Pre = precioPro.getText().toString();
+        Pre_com = precioPro_compra.getText().toString();
+        Pre_vent = precioPro_venta.getText().toString();
+        cant = cantidad.getText().toString();
+        cate = categoria.getText().toString();
+
         if(imagenUri == null){
             Toast.makeText(this, "Primero agrege una imagen", Toast.LENGTH_SHORT).show();
         }
@@ -87,9 +94,19 @@ public class agregarProductoActivity extends AppCompatActivity {
             Toast.makeText(this, "Debe ingresar el nombre del producto", Toast.LENGTH_SHORT).show();
         }else if(TextUtils.isEmpty(Desc)){
             Toast.makeText(this, "Debe ingresar la descripción del producto", Toast.LENGTH_SHORT).show();
-        }else if(TextUtils.isEmpty(Pre)){
-            Toast.makeText(this, "Debe ingresar el precio del producto", Toast.LENGTH_SHORT).show();
-        }else {
+        }else if(TextUtils.isEmpty(Pre_com)){
+            Toast.makeText(this, "Debe ingresar el precio de compra", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(Pre_vent)){
+            Toast.makeText(this, "Debe ingresar el precio de venta", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(cant)){
+            Toast.makeText(this, "Debe ingresar la cantidad del producto", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(cate)){
+            Toast.makeText(this, "Debe ingresar una categoria", Toast.LENGTH_SHORT).show();
+        }
+        else {
             GuardarInformacionProducto();
         }
     }
@@ -158,7 +175,9 @@ public class agregarProductoActivity extends AppCompatActivity {
         map.put("hora", CurrenTime);
         map.put("descripcion", Desc);
         map.put("nombre", Nom);
-        map.put("precio", Pre);
+        map.put("precioCompra", Pre_com);
+        map.put("precio_venta", Pre_vent);
+        map.put("cantidad",cant);
         map.put("imagen", downloadUri);
         map.put("categoria", Categoria);
 

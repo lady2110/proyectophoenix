@@ -45,11 +45,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/producto_descripcion"
-            android:text="Cantidad: 000"
             android:layout_marginStart="10dp"
+            android:text="Cantidad: 000"
             android:textAlignment="center"
-            android:textSize="21sp"
-            android:textColor="@color/teal_200"/>
+            android:textColor="@color/teal_200"
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/producto_precio"

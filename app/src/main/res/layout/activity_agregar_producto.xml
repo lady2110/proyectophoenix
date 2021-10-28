@@ -4,22 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#31FF5722"
     tools:context=".agregarProductoActivity">
 
 
     <TextView
         android:id="@+id/agregar_producto"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="#FF3C00"
-        android:fontFamily="@font/syncopate_bold"
-        android:padding="15dp"
-        android:text="Agregar producto"
         android:textAlignment="center"
+        android:background="@color/black"
         android:textColor="@color/white"
-        android:textStyle="normal" />
+        android:padding="15dp"
+        android:textStyle="bold|italic"
+        android:text="Agregar producto" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -27,18 +25,18 @@
         android:layout_height="200dp"
         android:layout_below="@id/agregar_producto"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="5dp"
         app:srcCompat="@drawable/ic_imageadd" />
+
 
     <EditText
         android:id="@+id/nompro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView5"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
-        android:backgroundTint="@color/white"
         android:hint="Nombre del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -48,40 +46,100 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nompro"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
-        android:backgroundTint="@color/white"
         android:hint="Descripción del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
 
-    <EditText
-        android:id="@+id/precio_pro"
+    <LinearLayout
+        android:id="@+id/preciosss"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/descripcion_pro"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/borderedondo"
-        android:backgroundTint="@color/white"
-        android:hint="Precio del Producto"
-        android:inputType="textMultiLine"
-        android:padding="10dp" />
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/precio_compra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/borderedondo"
+            android:hint="Precio de compra"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/precio_venta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/borderedondo"
+            android:hint="Precio de venta"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cant_cate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/preciosss"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/cantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/borderedondo"
+            android:hint="Cantidad"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/borderedondo"
+            android:hint="Categoria"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btn_agregar_producto"
-        android:layout_width="242dp"
-        android:layout_height="73dp"
-        android:layout_below="@id/precio_pro"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="#FF3C00"
-        android:fontFamily="@font/syncopate_bold"
-
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Producto"
         android:gravity="center"
-        android:text="Agregar Producto" />
+        android:layout_below="@id/cant_cate"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+
+
+
+        />
 
 
 </RelativeLayout>

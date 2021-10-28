@@ -42,4 +42,9 @@ public class Menu extends AppCompatActivity {
         Intent Siguiente2 = new Intent(Menu.this, Tiendas.class);
         startActivity(Siguiente2);
     }
+
+    public void listar(View view) {
+        Intent Siguiente2 = new Intent(Menu.this, MainActivityCarrito.class);
+        startActivity(Siguiente2);
+    }
 }
