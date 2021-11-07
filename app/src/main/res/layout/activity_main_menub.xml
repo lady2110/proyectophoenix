@@ -17,23 +17,22 @@
         >
 
 
-
-
         <TextView
             android:id="@+id/producto_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre del producto"
             android:textAlignment="center"
-            android:textSize="20sp"
-            android:textColor="@color/purple_200" />
+            android:textColor="@color/purple_200"
+            android:textSize="20sp" />
+
         <ImageView
             android:id="@+id/producto_imagen"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@id/producto_nombre"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="2dp"/>
+            android:layout_marginTop="2dp"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/producto_descripcion"

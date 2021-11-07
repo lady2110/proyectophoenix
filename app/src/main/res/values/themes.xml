@@ -8,4 +8,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="AppThemes.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppThemes.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppThemes.pOPUTOverlay"  parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemes"></style>
 </resources>

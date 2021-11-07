@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#31FF5722"
     tools:context=".agregarProductoActivity">
 
 
@@ -12,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:background="@color/black"
-        android:textColor="@color/white"
+        android:fontFamily="@font/syncopate_bold"
         android:padding="15dp"
-        android:textStyle="bold|italic"
-        android:text="Agregar producto" />
+        android:text="AGREGAR PRODUCTO"
+        android:textAlignment="center"
+        android:textColor="#FF3C00"
+        android:textSize="24sp"
+        android:textStyle="normal" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -37,6 +39,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
         android:hint="Nombre del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -49,6 +52,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/borderedondo"
+        android:backgroundTint="@color/white"
         android:hint="Descripción del Producto"
         android:inputType="textMultiLine"
         android:padding="10dp" />
@@ -70,6 +74,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/borderedondo"
+            android:backgroundTint="@color/white"
             android:hint="Precio de compra"
             android:inputType="numberDecimal"
             android:padding="10dp" />
@@ -83,6 +88,7 @@
 
             android:layout_weight="1"
             android:background="@drawable/borderedondo"
+            android:backgroundTint="@color/white"
             android:hint="Precio de venta"
             android:inputType="numberDecimal"
             android:padding="10dp" />
@@ -93,10 +99,10 @@
         android:id="@+id/cant_cate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_marginHorizontal="20dp"
         android:layout_below="@id/preciosss"
-        android:orientation="horizontal">
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <EditText
             android:id="@+id/cantidad"
@@ -107,6 +113,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/borderedondo"
+            android:backgroundTint="@color/white"
             android:hint="Cantidad"
             android:inputType="number"
             android:padding="10dp" />
@@ -119,6 +126,7 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="@drawable/borderedondo"
+            android:backgroundTint="@color/white"
             android:hint="Categoria"
             android:inputType="textMultiLine"
             android:padding="10dp" />
@@ -129,17 +137,17 @@
 
     <Button
         android:id="@+id/btn_agregar_producto"
-        android:layout_width="wrap_content"
+        android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:text="Agregar Producto"
-        android:gravity="center"
         android:layout_below="@id/cant_cate"
-        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FF3C00"
+        android:fontFamily="@font/syncopate_bold"
 
 
-
-        />
+        android:gravity="center"
+        android:text="Agregar Producto" />
 
 
 </RelativeLayout>

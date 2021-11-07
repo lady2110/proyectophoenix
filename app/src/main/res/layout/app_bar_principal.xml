@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPrincipal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppThemes.pOPUTOverlay">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="1000dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#31FF5722"
+            android:popupTheme="@style/AppThemes.pOPUTOverlay"
+            tools:targetApi="LOLLIPOP" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_carrito"
+        android:backgroundTint="#31FF5722" />
+
+    <include layout="@layout/contenido_principal" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
